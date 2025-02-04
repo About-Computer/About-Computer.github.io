@@ -278,6 +278,7 @@ li {
   display: flex;
   background-color: #4087dd;
   width: 90vw;
+  z-index: -2;
   position: relative;
 }
 .testex {
@@ -300,7 +301,7 @@ li {
   display: block;
   width: 15vw;
   height: auto;
-  border-radius: 9.4245vw;
+  border-radius: 2.5vw;
 }
 @property --angle {
   syntax: "<angle>";
@@ -310,7 +311,7 @@ li {
 .imgc {
   width: fit-content;
   height: fit-content;
-  border-radius: 9.4245vw;
+  border-radius: 2.5vw;
   position: relative;
 }
 .imgc::before,
@@ -319,7 +320,7 @@ li {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 9.4245vw;
+  border-radius: 2.5vw;
   z-index: -1;
   background-image: conic-gradient(
     from var(--angle),
@@ -335,11 +336,11 @@ li {
   bottom: 50%;
   left: 50%;
   translate: -50% 50%;
-  padding: 1.5vw;
+  padding: 0.5vw;
   animation: bdrdan 2.5s infinite linear;
 }
 .imgc::before {
-  filter: blur(2.5vw);
+  filter: blur(1.5vw);
 }
 @keyframes bdrdan {
   0% {
@@ -399,46 +400,6 @@ nav button {
     text-shadow: 0 0 0 lightgreen;
   }
 }
-#discoball {
-  width: 75vh;
-  height: 75vh;
-  border-radius: 100vw;
-  position: relative;
-}
-#discoball::before,
-#discoball::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  translate: -50% 50%;
-  border-radius: 100%;
-  background-image: conic-gradient(
-    from var(--angle),
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    purple,
-    red
-  );
-  animation: discoball 0.00001s linear infinite;
-}
-#discoball::before {
-  filter: blur(100vw);
-}
-@keyframes discoball {
-  0% {
-    --angle: 0deg;
-  }
-  100% {
-    --angle: 360deg;
-  }
-}
 #comp-lab {
   width: 92.5vw;
   border-radius: 2vw;
@@ -464,6 +425,16 @@ nav button {
   .abtn {
     font-size: 4vw;
   }
+  h1 {
+    font-size: 3vh;
+  }
+  h2,
+  h3,
+  h3,
+  li,
+  a {
+    font-size: 2vh;
+  }
   .testimonial {
     display: block;
   }
@@ -476,6 +447,12 @@ nav button {
     margin-left: auto;
     margin-right: auto;
   }
+  .ourphoto,
+  .imgc,
+  .imgc::before,
+  .imgc::after {
+    border-radius: 5vw;
+  }
   .testex,
   .ourphoto {
     border: 0;
@@ -485,10 +462,9 @@ nav button {
   }
   .imgc::before,
   .imgc::after {
-    padding: 3vw;
+    padding: 2vw;
   }
-  #discoball {
-    width: 75vw;
-    height: 75vw;
+  .owlink {
+    font-size: 2.5vh;
   }
 }
