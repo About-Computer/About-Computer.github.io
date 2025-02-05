@@ -278,8 +278,8 @@ li {
   display: flex;
   background-color: #4087dd;
   width: 90vw;
-  z-index: -2;
   position: relative;
+  z-index: 0;
 }
 .testex {
   color: transparent;
@@ -313,6 +313,7 @@ li {
   height: fit-content;
   border-radius: 2.5vw;
   position: relative;
+  z-index: -1;
 }
 .imgc::before,
 .imgc::after {
@@ -320,8 +321,8 @@ li {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 2.5vw;
   z-index: -1;
+  border-radius: 2.5vw;
   background-image: conic-gradient(
     from var(--angle),
     red,
